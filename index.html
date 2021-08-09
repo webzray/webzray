@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
     <html lang="en">
 
@@ -16,11 +15,11 @@
         <link rel="shortcut icon" href="images/favicon.ico">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <!-- tobii css -->
-        <link href="css/tobii.min.css" rel="stylesheet" type="text/css" />
         <!-- Icons -->
         <link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        <!-- Slider -->               
+        <link rel="stylesheet" href="css/tiny-slider.css"/> 
         <!-- Main Css -->
         <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
         <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
@@ -29,7 +28,7 @@
 
     <body>
         <!-- Loader -->
-        <div id="preloader">
+         <div id="preloader">
             <div id="status">
                 <div class="spinner">
                     <div class="double-bounce1"></div>
@@ -44,8 +43,11 @@
             <div class="container">
                 <!-- Logo container-->
                 <a class="logo" href="index.html">
-                    <img src="images/logo-dark.png" height="40" class="logo-light-mode" alt="">
-                    <img src="images/logo-light.png" height="40" class="logo-dark-mode" alt="">
+                    <span class="logo-light-mode">
+                        <img src="images/logo-dark.png" class="l-dark" height="40" alt="">
+                        <img src="images/logo-light.png" class="l-light" height="40" alt="">
+                    </span>
+                    <img src="images/logo-light.png" height="24" class="logo-dark-mode" alt="">
                 </a>
                
                 <!-- End Logo container-->
@@ -64,7 +66,7 @@
                 </div>
         
                 <div id="navigation">
-                    <!-- Navigation Menu-->  
+                    <!-- Navigation Menu-->   
                     <ul class="navigation-menu nav-right navbar-light">
                         <li><a href="index.html" class="sub-menu-item" >Home</a></li>
                         <li >
@@ -77,16 +79,15 @@
                             
                         </li>
                         <li>
-                            <a href="services.html">Services</a><span class="menu-arrow"></span>
+                            <a href="services.html">About us</a><span class="menu-arrow"></span>
                             
                         </li>
                         <li>
-                            <a href="contact.html">Contact  us</a><span class="menu-arrow"></span>
+                            <a href="contact.html">Contact us</a><span class="menu-arrow"></span>
                             
                         </li>
                     </ul> 
-                    
-                   <!--end navigation menu-->
+                    <!--end navigation menu-->
                     <div class="buy-menu-btn d-none">
                        
                     </div><!--end login button-->
@@ -94,40 +95,26 @@
             </div><!--end container-->
         </header><!--end header-->
         <!-- Navbar End -->
-        
-        <!-- Hero Start -->
-        <section class="bg-half-170 border-bottom d-table w-100 " id="home">
-            <div class="container ">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-7">
-                        <div class="title-heading mt-4">
-                            <div class="alert alert-white alert-pills shadow" role="alert">
-                               
-                                <span class="content"> Build <span class="text-primary">anything</span> you want - Landrick.</span>
-                            </div>
-                            <h1 class="heading mb-3">Leading Digital Business For <span class="text-primary typewrite" data-period="2000" data-type='[ "Agency", "Software", "Technology", "Studio", "Webapps" ]'> <span class="wrap"></span> </span> Solution</h1>
-                            <p class="para-desc text-muted">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap v5 html page.</p>
-                            <div class="mt-4">
-                               
-                            </div>
-                        </div>
-                    </div><!--end col-->
 
-                    <div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                        <div class="position-relative">
-                            <img src="images/laptop.png" class="rounded img-fluid mx-auto d-block" alt="">
-                            <div class="play-icon">
-                                <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="play-btn lightbox">
-                                    <i class="mdi mdi-play text-primary rounded-circle bg-white shadow"></i>
-                                </a>
+        <!-- Hero Start -->
+        <section class="bg-home d-flex align-items-center" style="background: url('images/hero.png') top; background-repeat: no-repeat; background-size:cover;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <div class="title-heading text-center">
+                            <span class="content" style="color: white;"> Build <span class="text-primary">anything</span> you want - Landrick.</span>
+                            <h1 class="heading mb-3" style="color: white;">Leading Digital Business For <span class="text-primary typewrite" data-period="2000" data-type='[ "Agency", "Software", "Technology", "Studio", "Webapps" ]'> <span class="wrap"></span> </span> Solution</h1>
+                            <p class="text-muted" style="text-align: center;">Launch your campaign and benefit from our expertise on designing and <br>managing conversion centered bootstrap v5 html page.</p>
+                            <div class="mt-4 pt-2">
+                                <a href="javascript:void(0)" class="btn btn-primary">Get Started</a>
                             </div>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
-            </div><!--end container--> 
+            </div><!--end container-->
         </section><!--end section-->
         <!-- Hero End -->
-        
+
         <!-- Feature Start -->
         <section class="section ">
             <div class="container">
@@ -223,169 +210,154 @@
         </section><!--end section-->
         <!-- End feature -->
 
-        <!-- CTA Start -->
-        <section class="section bg-cta" data-jarallax='{"speed": 0.5}' style="background: url('images/hero/staus2.png');" id="cta">
-            <div class="bg-overlay"></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title">
-                            <h4 class="title title-dark text-white mb-4">Stop leaving money on the table.</h4>
-                            <p class="text-light para-dark para-desc mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                            <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="play-btn border border-light mt-4 lightbox">
-                                <i data-feather="play" class="fea icon-ex-md text-white title-dark"></i>
-                            </a>
+        
+
+            <div class="container mt-100 mt-60">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <img src="images/crypto/lapy01.png" class="img-fluid" alt="">
+                    </div><!--end col-->
+
+                    <div class="col-lg-6 col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="section-title ms-lg-5">
+                            <h4 class="title mb-4">Crypto Management for Businesses</h4>
+                            <p class="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance: human perception is tuned to recognize certain patterns and repetitions in texts. If the distribution of letters visual impact.</p>
+                            <ul class="list-unstyled text-muted">
+                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Digital Marketing Solutions for Tomorrow</li>
+                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Create your own skin to match your brand</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="mt-3 h6 text-primary">Find Out More <i class="uil uil-angle-right-b"></i></a>
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
-        </section><!--end section-->
-        <!-- CTA End -->
 
+            <div class="container mt-100 mt-60">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-6 order-2 order-md-1 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                        <div class="section-title me-lg-5">
+                            <h4 class="title mb-4">Smart Tools for Finance Teams</h4>
+                            <p class="text-muted">This prevents repetitive patterns from impairing the overall visual impression and facilitates the comparison of different typefaces. Furthermore, it is advantageous when the dummy text is relatively realistic.</p>
+                            <ul class="list-unstyled text-muted">
+                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Digital Marketing Solutions for Tomorrow</li>
+                                <li class="mb-0"><span class="text-primary h5 me-2"><i class="uil uil-check-circle align-middle"></i></span>Create your own skin to match your brand</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="mt-3 h6 text-primary">Find Out More <i class="uil uil-angle-right-b"></i></a>
+                        </div>
+                    </div><!--end col-->
 
-        <br><br><br><br><br>
-        
-
-      
-
-       
+                    <div class="col-lg-5 col-md-6 order-1 order-md-2">
+                        <img src="images/crypto/iphone.png" class="img-fluid" alt="">
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
+        </section><!--end section-->
+        <!-- End -->
 
-              <!-- FEATURES START -->
-        <section class="section ">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="features-absolute">
-                            <div class="row">
-                                <div class="col-lg-3 col-md-6 col-12">
-                                    <div class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
-                                        <div class="icons text-primary text-center mx-auto">
-                                            <i class="uil uil-airplay d-block rounded h3 mb-0"></i>
-                                        </div>
-            
-                                        <div class="card-body p-0 content">
-                                            <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Best Financial Advice</a></h5>
-                                            <p class="text-muted">The most well-known which is said to have originated</p>
-            
-                                            <a href="javascript:void(0)" class="text-primary">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-6 col-12 mt-4 mt-md-0 pt-2 pt-md-0">
-                                    <div class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
-                                        <div class="icons text-primary text-center mx-auto">
-                                            <i class="uil uil-clipboard-alt d-block rounded h3 mb-0"></i>
-                                        </div>
-            
-                                        <div class="card-body p-0 content">
-                                            <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Authorised Finance Brand</a></h5>
-                                            <p class="text-muted">The most well-known which is said to have originated</p>
-            
-                                            <a href="javascript:void(0)" class="text-primary">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
-                                    <div class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
-                                        <div class="icons text-primary text-center mx-auto">
-                                            <i class="uil uil-credit-card-search d-block rounded h3 mb-0"></i>
-                                        </div>
-            
-                                        <div class="card-body p-0 content">
-                                            <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Compehensive Advices</a></h5>
-                                            <p class="text-muted">The most well-known which is said to have originated</p>
-            
-                                            <a href="javascript:void(0)" class="text-primary">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                
-                                <div class="col-lg-3 col-md-6 col-12 mt-4 mt-lg-0 pt-2 pt-lg-0">
-                                    <div class="card features feature-clean explore-feature p-4 px-md-3 border-0 rounded-md shadow text-center">
-                                        <div class="icons text-primary text-center mx-auto">
-                                            <i class="uil uil-ruler-combined d-block rounded h3 mb-0"></i>
-                                        </div>
-            
-                                        <div class="card-body p-0 content">
-                                            <h5 class="mt-4"><a href="javascript:void(0)" class="title text-dark">Best Tax Advantages</a></h5>
-                                            <p class="text-muted">The most well-known which is said to have originated</p>
-            
-                                            <a href="javascript:void(0)" class="text-primary">Read More <i class="uil uil-angle-right-b align-middle"></i></a>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
+
+         <!-- Download Cta Start -->
+         <div class="container mt-100 mt-60">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <img src="images/download.png" class="img-fluid mx-auto d-block" alt="">
+                </div><!--end col-->
+
+                <div class="col-lg-7 col-md-7 col-12 mt-4 mt-sm-0 pt-2 pt-sm-0">
+                    <div class="section-title">
+                        <div class="alert alert-light alert-pills" role="alert">
+                            <span class="badge bg-primary rounded-pill me-1">Apps</span>
+                            <span class="content">Download now <i class="uil uil-angle-right-b align-middle"></i></span>
+                        </div>
+                        <h4 class="title mb-4">Available for your <br> Smartphones</h4>
+                        <p class="text-muted para-desc mb-0">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        <div class="my-4">
+                            <a href="javascript:void(0)" class="btn btn-lg btn-dark mt-2 me-2"><i class="uil uil-apple"></i> App Store</a>
+                            <a href="javascript:void(0)" class="btn btn-lg btn-dark mt-2"><i class="uil uil-google-play"></i> Play Store</a>
+                        </div>
+
+                        <div class="d-inline-block">
+                            <div class="pt-4 d-flex align-items-center border-top">
+                                <i data-feather="smartphone" class="fea icon-md me-2 text-primary"></i>
+                                <div class="content">
+                                    <h6 class="mb-0">Install app now on your cellphones</h6>
+                                    <a href="javascript:void(0)" class="text-primary">Learn More <i class="uil uil-angle-right-b align-middle"></i></a> 
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div><!--end col-->
+            </div><!--end row-->
+        </div><!--end container-->
+    </section><!--end section-->
+    <div class="position-relative">
+        <div class="shape overflow-hidden text-footer">
+            <svg viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </div>
+    <!-- Social Icons , features and testi End -->
+
+
+        <!-- Partners start -->
+        <section class="py-4 border-bottom border-top">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/amazon.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/google.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/lenovo.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/paypal.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/shopify.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
+                    
+                    <div class="col-lg-2 col-md-2 col-6 text-center py-4">
+                        <img src="images/client/spotify.svg" class="avatar avatar-ex-sm" alt="">
+                    </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
+        </section><!--end section-->
+        <!-- Partners End -->
 
-            
-
-            <div class="container mt-100 mt-60">
+        <!-- Start CTA -->
+        <section class="section pb-0" style="background: url('images/crypto/bg.jpg') center;">
+            <div class="bg-overlay bg-primary bg-gradient" style="opacity: 0.7;"></div>
+            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <div class="section-title">
-                           
-                            <section class="section">
-                                <div class="container">
-                                    <div class="row align-items-center">
-                                        <div class="col-lg-5 col-md-6">
-                                            <img src="images/dd.jpg" class="img-fluid rounded-md shadow-lg" alt="">
-                                        </div><!--end col-->
-                    
-                                        <div class="col-lg-7 col-md-6 mt-4 pt-2 mt-sm-0 pt-sm-0">
-                                            <div class="section-title text-md-start text-center">
-                                                <h4 class="title mb-4">Collaborate with your <br> team anytime and anywhare.</h4>
-                                                <p class="text-muted mb-0 para-desc">Start working with <span class="text-primary fw-bold">Landrick</span> that can provide everything you need to generate awareness, drive traffic, connect.</p>
-                                                
-                                                <div class="d-flex align-items-center text-start mt-4 pt-2">
-                                                    <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                                                        <i class="uil uil-capture"></i>
-                                                    </div>
-                                                    <div class="flex-1">
-                                                        <a href="javascript:void(0)" class="text-dark h6">Find Better Leads</a>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="d-flex align-items-center text-start mt-4">
-                                                    <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                                                        <i class="uil uil-file"></i>
-                                                    </div>
-                                                    <div class="flex-1">
-                                                        <a href="javascript:void(0)" class="text-dark h6">Set Instant Metting</a>
-                                                    </div>
-                                                </div>
-                    
-                                                <div class="d-flex align-items-center text-start mt-4">
-                                                    <div class="text-primary h4 mb-0 me-3 p-3 rounded-md shadow">
-                                                        <i class="uil uil-credit-card-search"></i>
-                                                    </div>
-                                                    <div class="flex-1">
-                                                        <a href="javascript:void(0)" class="text-dark h6">Get Paid Seemlessly</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!--end col-->
-                                    </div><!--end row-->
-                                </div><!--end container-->
-                            
-                            </div>
+                    <div class="col-12">
+                        <div class="section-title text-center mb-4 pb-2">
+                            <h4 class="title text-white title-dark mb-4">From Zero to Crypto in Minutes.</h4>
+                            <p class="text-light para-dark para-desc mx-auto">Start working with Landrick that can provide everything you need to generate awareness, drive traffic, connect.</p>
+                        </div>
+                        <div class="subcribe-form mt-4">
+                            <form>
+                                <div class="mb-2">
+                                    <input type="email" id="email" name="email" class="rounded-pill" placeholder="E-mail :">
+                                    <button type="submit" class="btn btn-pills btn-primary">Subscribe</button>
+                                </div>
+                            </form><!--end form-->
+                        </div><!--end subscribe form-->
+                        <div class="mt-4 pt-2">
+                            <img src="images/crypto/cta.png" class="img-fluid d-block mx-auto" alt="">
                         </div>
                     </div><!--end col-->
                 </div><!--end row-->
             </div><!--end container-->
         </section><!--end section-->
-        <!-- News End -->
-
-
+        <!-- End CTA -->
         
-
         <!-- Footer Start -->
         <footer class="footer">
             <div class="container">
@@ -479,10 +451,8 @@
 
         <!-- javascript -->
         <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- tobii js -->
-        <script src="js/tobii.min.js "></script>
-        <!-- Parallax -->
-        <script src="js/parallax.js "></script>
+        <!-- SLIDER -->
+        <script src="js/tiny-slider.js "></script>
         <!-- Icons -->
         <script src="js/feather.min.js"></script>
         <!-- Main Js -->
