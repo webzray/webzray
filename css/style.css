@@ -4890,6 +4890,40 @@ p {
 }
 
 
+.mb-0-g:hover {
+  background-color:  #2f55d4;
+  border-radius: 10px;
+  color: white;
+}
 
+.css-selector {
+  background: linear-gradient(270deg, #277dff, #b527ff, #084aff, #ca31cf);
+  background-size: 800% 800%;
 
+  -webkit-animation: AnimationName 12s ease infinite;
+  -moz-animation: AnimationName 12s ease infinite;
+  -o-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 /*# sourceMappingURL=style.css.map */
