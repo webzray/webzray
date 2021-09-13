@@ -24,6 +24,8 @@
         <!-- Main Css -->
         <link href="css/style.css" rel="stylesheet" type="text/css" id="theme-opt" />
         <link href="css/colors/default.css" rel="stylesheet" id="color-opt">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
     </head>
 
@@ -101,7 +103,7 @@
                             <div class="card-body py-5">
                                 <h4 class="card-title">Get In Touch !</h4>
                                 <div class="custom-form mt-3">
-                                    <form method="post" name="myForm" onsubmit="return validateForm()">
+                                    <form method="post" name="myForm" onsubmit="return validateForm()" action="php/contact.php" style="display: none;" >
                                         <p id="error-msg" class="mb-0"></p>
                                         <div id="simple-msg"></div>
                                         <div class="row">
@@ -153,6 +155,145 @@
                                             </div><!--end col-->
                                         </div><!--end row-->
                                     </form>
+
+                                    <form id="contact-form" class="form" method="post" action="contact.html"
+                                            data-toggle="validator" style="display: none;">
+                                            <div class="messages"></div>
+                                            <div class="input__wrap controls">
+                                                <div class="form-group">
+                                                    <div class="entry-box">
+                                                        <label>Your name *</label>
+                                                        <input id="form_name" type="text" name="name"
+                                                            placeholder="Type your name" required="required"
+                                                            data-error="name is required.">
+                                                    </div>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="entry-box">
+                                                        <label>Your E-Mail *</label>
+                                                        <input id="form_email" type="email" name="email"
+                                                            placeholder="Type your Email Address" required="required"
+                                                            data-error="Valid email is required.">
+                                                    </div>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="entry-box">
+                                                        <label>What's up?</label>
+                                                        <textarea id="form_message" class="form-control" name="message"
+                                                            placeholder="Tell us about you and the world"
+                                                            required="required"
+                                                            data-error="Please,leave us a message."></textarea>
+                                                    </div>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <input type="submit" name="ok" class="btn btn-success btn-send" value="Send message">
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="wrapper"> <!---->
+                                        <form action="#">
+                                            <div class="dbl-field">
+                                              <div class="field">
+                                                <input type="text" name="name" placeholder="Enter your name">
+                                                <i class='fas fa-user'></i>
+                                              </div>
+                                              <div class="field">
+                                                <input type="text" name="email" placeholder="Enter your email">
+                                                <i class='fas fa-envelope'></i>
+                                              </div>
+                                            </div>
+                                            <div class="dbl-field">
+                                              <div class="field">
+                                                <input type="text" name="phone" placeholder="Enter your phone">
+                                                <i class='fas fa-phone-alt'></i>
+                                              </div>
+                                              <div class="field">
+                                                <input type="text" name="website" placeholder="Enter your website">
+                                                <i class='fas fa-globe'></i>
+                                              </div>
+                                            </div>
+                                            <div class="message">
+                                              <textarea placeholder="Write your message" name="message"></textarea>
+                                              <i class="material-icons">message</i>
+                                            </div>
+                                            <div class="button-area">
+                                              <button type="submit">Send Message</button>
+                                              <span></span>
+                                            </div>
+                                          </form>
+                                        </div>
+                                    
+                                        <form id="contact-form" method="post" role="form" action="function.php">
+
+                                            <div class="messages"></div>
+                    
+                                            <div class="controls">
+                    
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="form_name">Name *</label>
+                                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your name *" required="required" data-error="Name is required.">
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="form_email">Email *</label>
+                                                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="form_phone">Phone</label>
+                                                            <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div> -->
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label for="form_message">Message *</label>
+                                                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for us *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                                            <div class="help-block with-errors"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <input type="submit" name="ok" class="btn btn-success btn-send" value="Send message" >
+                                                        <span id="errorMessage" class="text-danger"></span>  
+                                                        <span id="successMessage" class="text-success"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12"> <br>
+                                                        <p class="text-muted"><strong>*</strong> These fields are required.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                    
+                                        </form>
+
+
+                                    
+
+
+
+
+
+
+
+
                                 </div><!--end custom-form-->
                             </div>
                         </div>
@@ -329,7 +470,9 @@
 
 
         <!-- javascript -->
+        <script src="js/script.js"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
+        
         <!-- tobii js -->
         <script src="js/tobii.min.js "></script>
         <!-- Icons -->
